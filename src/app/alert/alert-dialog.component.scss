@@ -1,0 +1,15 @@
+button {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #FF7F50;
+  width: 140px;
+  height: 35px;
+  text-align: center;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  &:hover {
+    background-color: #87CEFA;
+  }
+}
