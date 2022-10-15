@@ -32,17 +32,11 @@ export class AppComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
   naga = 1;
 
   constructor(
-    // private obje: Subscription,
     private api: ApiService,
     private dialogService: DialogService
   ){
   }
 
-  sub() {
-    // console.log(this.subscriptions);
-    // console.log(this.obje);
-    this.naga = 2;
-  }
   unsub() {
     this.obje.unsubscribe();
     console.log(this.obje);
