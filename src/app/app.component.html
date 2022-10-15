@@ -1,3 +1,5 @@
+<div (click)="sub()">Подписки</div>{{naga}}
+<div (click)="unsub()">Отписка</div>
 <div class="osn">
   <div class="top">
     <div class="form">
@@ -7,11 +9,11 @@
     <div class="upload" (click)="upload(true)">Обновить</div>
   </div>
   <section *ngIf="infoObj" class="content">
-    <div class="card" *ngFor="let k of objectKeys(infoObj['Valute'])">
-      <div class="name">{{infoObj['Valute'][k]['Name']}}</div>
-      <div class="nominal">Номинал: <span>{{infoObj['Valute'][k]['Nominal']}}</span></div>
-      <div class="value">Стоимость: <span>{{infoObj['Valute'][k]['Value'].toFixed(2)}}</span></div>
-      <div *ngIf="sum>0" class="sum">Купить: <span title="{{sum | total:infoObj['Valute'][k]['Nominal']:infoObj['Valute'][k]['Value']}}">{{sum | total:infoObj['Valute'][k]['Nominal']:infoObj['Valute'][k]['Value']}}</span></div>
+    <div class="card" *ngFor="let k of objectKeys(infoObj)">
+      <div class="name">{{infoObj[k]['Name']}}</div>
+      <div class="nominal">Номинал: <span>{{infoObj[k]['Nominal']}}</span></div>
+      <div class="value">Стоимость: <span>{{infoObj[k]['Value'].toFixed(2)}}</span></div>
+      <div *ngIf="sum>0" class="sum">Купить: <span title="{{sum | total:infoObj[k]['Nominal']:infoObj[k]['Value']}}">{{sum | total:infoObj[k]['Nominal']:infoObj[k]['Value']}}</span></div>
     </div>
   </section>
 </div>
