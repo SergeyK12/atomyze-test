@@ -39,7 +39,6 @@ export class AppComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
 
   unsub() {
     this.obje.unsubscribe();
-    console.log(this.obje);
     this.destroy$.next(true);
     this.destroy$.unsubscribe();
   }
